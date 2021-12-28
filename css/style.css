@@ -1,11 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
-h1 {
+h1, h2, h3 {
   font-family: "Shrikhand", cursive;
 }
 
 p {
   font-family: "Roboto", sans-serif;
+}
+
+.icon::before {
+  font-family: "Font Awesome 5 Free";
+}
+.icon__background--loc {
+  content: "\f3c5";
+  display: block;
+  height: 50px;
+  width: 50px;
+  background-color: aqua;
 }
 
 /*# sourceMappingURL=style.css.map */
