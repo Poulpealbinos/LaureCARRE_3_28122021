@@ -1,9 +1,18 @@
 //1 Utils
-@import 'utils/__variables.scss';
+@import 'utils/variables';
+@import 'utils/mixins';
+
 //2 Vendors
+@import 'vendors/normalize.css';
 
 //3 Base
-@import 'base/_typography.scss';
+@import 'base/global';
 
 //4 Components
-@import 'components/_icons.scss';
+@import 'components/global';
+
+//5 Layout
+@import 'layout/global';
+
+//6 Page
+@import 'page/home';

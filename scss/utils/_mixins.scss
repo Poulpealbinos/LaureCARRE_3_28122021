@@ -1,0 +1,13 @@
+@mixin box-shadow ($color: #c8c8c8) {
+  box-shadow: 0 3px 6px $color;
+}
+
+@mixin numerotation($nmbElement) {
+  @for $i from 0 to $nmbElement {
+      &:nth-child(#{$i + 1}) {
+      &::before {
+        content: "#{$i + 1}";
+      }
+    }
+  }
+};

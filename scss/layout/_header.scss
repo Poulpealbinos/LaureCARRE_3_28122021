@@ -1,0 +1,29 @@
+.main-nav{
+    height: 64px;
+    //Pour afficher l'ombre :
+    z-index: 100;
+    position: relative;
+    @include box-shadow;
+    &__list {
+        margin: 0;
+        padding: 0;
+        height: inherit;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: stretch;
+        justify-content: space-between;
+        
+        list-style: none;
+    };
+    &__item{
+        display: flex;
+        align-content: center;
+        align-items: center;
+        };
+    &__link {
+        display: block;
+    };
+};

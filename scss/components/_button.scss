@@ -1,0 +1,22 @@
+.btn{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+    height: 50px;
+    width: max-content;
+    margin: 30px auto;
+
+    border-radius: 25px;
+    background: $omf-color-01;
+    background: -moz-linear-gradient(356deg, $omf-color-01 20%, $omf-color-02 100%);
+    background: -webkit-linear-gradient(356deg, $omf-color-01 20%, $omf-color-02 100%);
+    background: linear-gradient(356deg, $omf-color-01 20%, $omf-color-02 100%);
+    @include box-shadow;
+    &__body{
+        font-size: map-get($font-size, "button");
+        padding: 0 24px;
+        color: #fff;
+    }
+};

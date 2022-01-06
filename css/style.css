@@ -1,22 +1,226 @@
+@import 'vendors/normalize.css';
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
-h1, h2, h3 {
-  font-family: "Shrikhand", cursive;
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-p {
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.list-item--content {
+  display: inline-block;
+}
+
+* {
   font-family: "Roboto", sans-serif;
 }
 
-.icon::before {
-  font-family: "Font Awesome 5 Free";
+.h1, .h2, .h3, .h4 {
+  font-family: "Shrikhand", cursive;
+  padding: 20px 0;
+  margin: 0;
 }
-.icon__background--loc {
-  content: "\f3c5";
-  display: block;
+
+p {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.btn {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
   height: 50px;
-  width: 50px;
-  background-color: aqua;
+  width: max-content;
+  margin: 30px auto;
+  border-radius: 25px;
+  background: #9356DC;
+  background: -moz-linear-gradient(356deg, #9356DC 20%, #ff79da 100%);
+  background: -webkit-linear-gradient(356deg, #9356DC 20%, #ff79da 100%);
+  background: linear-gradient(356deg, #9356DC 20%, #ff79da 100%);
+  box-shadow: 0 3px 6px #c8c8c8;
+}
+.btn__body {
+  font-size: 16px;
+  padding: 0 24px;
+  color: #fff;
+}
+
+.card {
+  width: 100%;
+  margin: 0px auto;
+  margin-bottom: 18px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px #c8c8c8;
+}
+.card__figure {
+  height: 180PX;
+  position: relative;
+  overflow: hidden;
+}
+.card__tag {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 7px 14px;
+  border-radius: 3px;
+  background-color: #99E2D0;
+  color: #1b6150;
+}
+.card__image {
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  height: 100%;
+}
+.card__body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+}
+.card__actions {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav {
+  height: 64px;
+  z-index: 100;
+  position: relative;
+  box-shadow: 0 3px 6px #c8c8c8;
+}
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: stretch;
+  justify-content: space-between;
+  list-style: none;
+}
+.main-nav__item {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+.main-nav__link {
+  display: block;
+}
+
+.row {
+  margin: 0;
+  padding: 20px;
+}
+
+.main-footer {
+  background-color: #353535;
+  margin-top: 45px;
+  padding: 24px;
+}
+
+.footer-nav__item {
+  margin-bottom: 10px;
+}
+.footer-nav__item--logo {
+  filter: invert(1);
+  margin-bottom: 20px;
+}
+.footer-nav__link {
+  color: #fff;
+}
+
+.citySearch {
+  height: 50px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #eaeaea;
+}
+.citySearch__label i {
+  color: #353535;
+}
+.citySearch__input {
+  border: none;
+  background: none;
+  color: #353535;
+  text-align: center;
+  font-weight: 600;
+}
+
+h1 {
+  font-family: Roboto, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2 {
+  font-family: Roboto, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.row-landing {
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+.list-item {
+  position: relative;
+  padding: 30px;
+  margin-bottom: 24px;
+  background: #f8f8f8;
+  border-radius: 20px;
+  box-shadow: 0 3px 6px #c8c8c8;
+}
+.list-item:nth-child(1)::before {
+  content: "1";
+}
+.list-item:nth-child(2)::before {
+  content: "2";
+}
+.list-item:nth-child(3)::before {
+  content: "3";
+}
+.list-item::before {
+  display: block;
+  position: absolute;
+  left: -9px;
+  background: #9356DC;
+  padding: 3px 7px;
+  border-radius: 50%;
+  color: white;
+}
+.list-item .fas {
+  margin-right: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */

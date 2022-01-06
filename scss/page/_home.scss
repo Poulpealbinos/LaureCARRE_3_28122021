@@ -1,0 +1,69 @@
+//Form city
+.citySearch {
+    height: 50px;
+    width: 100vw;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background: #eaeaea;
+    &__label{
+        & i{
+            color: #353535;
+        }
+    }
+    &__input{
+        border: none;
+        background: none;
+        color: #353535;
+        text-align: center;
+        font-weight: 600;
+    };
+};
+
+//Titres sans-sérif pour homepage
+h1{
+    font-family: $omf-typo-02;
+    font-size: map-get($font-size, "T1");
+    font-weight: bold;
+    text-align: center;
+};
+h2{
+    font-family: $omf-typo-02;
+    font-size: map-get($font-size, "T1");
+    font-weight: bold;
+};
+
+//Block element
+.row-landing {
+    text-align: center;
+    background-color: #f6f6f6;
+};
+
+//How To - list style
+.list{
+    &-item{
+        position: relative;
+        padding: 30px;
+        margin-bottom: 24px;
+        
+        background: #f8f8f8;
+        border-radius: 20px;
+        @include box-shadow;
+        @include numerotation(3);
+        //content 'num'     ^^^^^^
+        &::before{
+            display: block;
+            position: absolute;
+            left: -9px;
+            background: $omf-color-01;
+            padding: 3px 7px;
+            border-radius: 50%;
+            color: white;
+        };
+        & .fas {
+            margin-right: 24px;
+        }
+    };
+};
