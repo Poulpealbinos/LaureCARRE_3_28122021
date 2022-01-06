@@ -2,3 +2,16 @@
     margin: 0;
     padding: 20px;
 }
+
+.hero{
+    &__figure {
+        width: 100vw;
+        overflow: hidden;
+        height: 250px;
+    }
+    &__img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}

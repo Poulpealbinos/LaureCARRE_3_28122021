@@ -139,6 +139,17 @@ a {
   padding: 20px;
 }
 
+.hero__figure {
+  width: 100vw;
+  overflow: hidden;
+  height: 250px;
+}
+.hero__img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
 .main-footer {
   background-color: #353535;
   margin-top: 45px;
