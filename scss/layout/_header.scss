@@ -22,7 +22,11 @@
         display: flex;
         align-content: center;
         align-items: center;
+        justify-content: center;
+        &--side {
+            width: 10%;
         };
+    };
     &__link {
         display: block;
     };

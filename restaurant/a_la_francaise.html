@@ -16,15 +16,15 @@
   <header>
     <nav class="main-nav" aria-label="Main">
       <ul class="main-nav__list">
-        <li class="main-nav__item"></li>
+        <li class="main-nav__item main-nav__item--side"> <a href="#"><i class="fas fa-arrow-left"></i></a></li>
         <li class="main-nav__item">
-          <a href="" class="main-nav__link">
+          <a href="../index.html" class="main-nav__link">
             <svg viewBox="0 0 200 50" width="120" height="30">
               <image xlink:href="../img/logo/ohmyfood@2x.svg" width="200" height="50" />
             </svg>
           </a>
         </li>
-        <li class="main-nav__item"></li>
+        <li class="main-nav__item  main-nav__item--side"></li>
       </ul>
     </nav>
   </header>
@@ -33,20 +33,22 @@
         <img class="hero__img" src="../img/restaurants/A_la_francaise-Cite_Rouge.jpg" alt="Plat - A la française">
       </div>
   </aside>
-  <main>
-      <div class="row">
-          <h1>A la française</h1>
-          <i class="fas fa-heart"></i>
+  <main class="restaurant-container">
+      <div class="row restaurant-header">
+            <div class="restaurant-header__content">
+                <h1 class="restaurant-header__title">A la française</h1>
+                <i class="far fa-heart"></i>
+            </div>
       </div>
-      <div class="row">
+      <div class="row restaurant-menu">
           <div class="menu">
               <!--Container des div entrée plat dessert-->
-                <div class="menu__inner A">
+                <div class="menu__container A">
                     <!--Container ENTREE-->
                     <div class="menu__header">
-                        <div  class="menu__title"><h2>Entrées</h2></div>
+                        <div class="menu__title"><h2>Entrées</h2></div>
                     </div>
-                    <div class="menu__card-container">
+                    <div class="menu__inner">
                         <!--Container des card-->
                         <div class="menu-card 1">
                             <div class="menu-card__body">
@@ -100,12 +102,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="menu__inner B">
+                <div class="menu__container B">
                     <!--Container ENTREE-->
                     <div class="menu__header">
                         <div  class="menu__title"><h2>Plats</h2></div>
                     </div>
-                    <div class="menu__card-container">
+                    <div class="menu__inner">
                         <!--Container des card-->
                         <div class="menu-card 1">
                             <div class="menu-card__body">
@@ -157,12 +159,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="menu__inner C">
+                <div class="menu__container C">
                     <!--Container ENTREE-->
                     <div class="menu__header">
                         <div  class="menu__title"><h2>Déssert</h2></div>
                     </div>
-                    <div class="menu__card-container">
+                    <div class="menu__inner">
                         <!--Container des card-->
                         <div class="menu-card 1">
                             <div class="menu-card__body">
