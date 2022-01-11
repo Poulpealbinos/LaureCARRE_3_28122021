@@ -7,7 +7,7 @@
     &__figure {
         width: 100vw;
         overflow: hidden;
-        height: 250px;
+        height: 260px;
     }
     &__img {
         object-fit: cover;
@@ -22,10 +22,10 @@
         background-color: #f8f8f8;
     }
     &-header {
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
         background: inherit;
-        margin-top: -10px;
+        margin-top: -40px;
         z-index: 10;
         position: relative;
         &__content {
@@ -36,6 +36,10 @@
         }
         &__title {
             font-family: $omf-typo-01;
+            &+i{
+                font-size: 20px;
+                margin-right: 20px;
+            }
         }
     }  
 }
@@ -45,6 +49,7 @@
     &__container{}
     &__header{}
     &__title{
+        margin-bottom: 14px;
         & h2{
             font-weight: 300;
             text-transform: uppercase;
@@ -61,13 +66,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 80px;
+        height: 66px;
 
         background: #fff;
         overflow: hidden;
 
-        margin-bottom: 8px;
-        border-radius: 8px;
+        margin-bottom: 14px;
+        border-radius: 14px;
 
         @include box-shadow;
         &:hover{
@@ -75,6 +80,15 @@
                 width: 15%;
                 transition: width 0.5s;
             }
+        }
+        &__title{
+            font-weight: 600;
+            font-size: 18px;
+        }
+        &__info{
+            font-weight: 300;
+            font-size: 14px;
+            margin-top: 7px;
         }
         &__body{
             padding: 10px 10px;
@@ -84,6 +98,13 @@
             align-items: center;
             justify-content: space-between;
             flex-wrap: nowrap;
+        }
+        &__price {
+            align-self: flex-end;
+            & p {
+                font-weight: 600;
+                font-size: 15px;
+            }
         }
         &__action{
             width: 0;
