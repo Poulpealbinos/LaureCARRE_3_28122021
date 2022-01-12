@@ -2,51 +2,54 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>La palette du goût - Oh my food</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La palette du goût - Oh my food</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-  <header>
-    <nav class="main-nav">
-      <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--side"> <a href="#"><i class="fas fa-arrow-left"></i></a></li>
-        <li class="main-nav__item">
-          <a href="../index.html" class="main-nav__link">
-            <svg viewBox="0 0 200 50" width="120" height="30">
-              <image xlink:href="../img/logo/ohmyfood@2x.svg" width="200" height="50" />
-            </svg>
-          </a>
-        </li>
-        <li class="main-nav__item  main-nav__item--side"></li>
-      </ul>
-    </nav>
-  </header>
-  <aside class="hero">
-      <div class="hero__figure">
-        <img class="hero__img" src="../img/restaurants/La_Palette_du_gout-Menilmontant.jpg" alt="Plat - La palette du goût">
-      </div>
-  </aside>
-  <main class="restaurant-container">
-      <div class="row restaurant-header">
+    <header>
+        <nav class="main-nav">
+            <ul class="main-nav__list">
+                <li class="main-nav__item main-nav__item--side"> <a href="#"><i class="fas fa-arrow-left"></i></a></li>
+                <li class="main-nav__item">
+                    <a href="../index.html" class="main-nav__link">
+                        <svg viewBox="0 0 200 50" width="120" height="30">
+                            <image xlink:href="../img/logo/ohmyfood@2x.svg" width="200" height="50" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="main-nav__item  main-nav__item--side"></li>
+            </ul>
+        </nav>
+    </header>
+    <aside class="hero">
+        <div class="hero__figure">
+            <img class="hero__img" src="../img/restaurants/La_Palette_du_gout-Menilmontant.jpg"
+                alt="Plat - La palette du goût">
+        </div>
+    </aside>
+    <main class="restaurant-container">
+        <div class="row restaurant-header">
             <div class="restaurant-header__content">
                 <h1 class="restaurant-header__title">La palette du goût</h1>
-                <i class="far fa-heart"></i>
+                <i class="far fa-heart fav-action"></i>
             </div>
-      </div>
-      <div class="row restaurant-menu">
-          <div class="menu">
-              <!--Container des div entrée plat dessert-->
+        </div>
+        <div class="row restaurant-menu">
+            <div class="menu">
+                <!--Container des div entrée plat dessert-->
                 <div class="menu__container A">
                     <!--Container ENTREE-->
                     <div class="menu__header">
-                        <div class="menu__title"><h2>Entrées</h2></div>
+                        <div class="menu__title">
+                            <h2>Entrées</h2>
+                        </div>
                     </div>
                     <div class="menu__inner">
                         <!--Container des card-->
@@ -95,7 +98,7 @@
                             </div>
                             <div class="menu-card__action">
                                 <!--Action affichée au hover-->
-                                        <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-check-circle"></i>
 
                             </div>
                         </div>
@@ -104,7 +107,9 @@
                 <div class="menu__container B">
                     <!--Container ENTREE-->
                     <div class="menu__header">
-                        <div  class="menu__title"><h2>Plats</h2></div>
+                        <div class="menu__title">
+                            <h2>Plats</h2>
+                        </div>
                     </div>
                     <div class="menu__inner">
                         <!--Container des card-->
@@ -161,7 +166,9 @@
                 <div class="menu__container C">
                     <!--Container ENTREE-->
                     <div class="menu__header">
-                        <div  class="menu__title"><h2>Desserts</h2></div>
+                        <div class="menu__title">
+                            <h2>Desserts</h2>
+                        </div>
                     </div>
                     <div class="menu__inner">
                         <!--Container des card-->
@@ -215,29 +222,32 @@
                         </div>
                     </div>
                 </div>
-              </div>
-          </div>
-      </div>
-      <div class="row row--prefooter">
-          <a href="#" class="btn">
-              <p class="btn__body">Commander</p>
-          </a>
-      </div>
-  </main>
-  <footer class="main-footer">
-    <nav class="footer-nav">
-      <ul class="footer-nav__list">
-        <li class="footer-nav__item footer-nav__item--logo"><a href="" class="footer-nav__link">
-          <svg viewBox="0 0 200 50" width="120" height="30">
-            <image xlink:href="../img/logo/ohmyfood@2x.svg" width="200" height="50" />
-          </svg>
-        </a></li>
-        <li class="footer-nav__item"><a href="#" class="footer-nav__link"><i class="fas fa-utensils"></i> Proposer un restaurant</a></li>
-        <li class="footer-nav__item"><a href="#" class="footer-nav__link"><i class="fas fa-hands-helping"></i> Devenir partenaire</a></li>
-        <li class="footer-nav__item"><a href="#" class="footer-nav__link">Mentions légales</a></li>
-        <li class="footer-nav__item"><a href="mailto:conctact@ohmyfood.fr" class="footer-nav__link">Contact</a></li>
-      </ul>
-    </nav>
-  </footer>
+            </div>
+        </div>
+        <div class="row row--prefooter">
+            <a href="#" class="btn">
+                <p class="btn__body">Commander</p>
+            </a>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <nav class="footer-nav">
+            <ul class="footer-nav__list">
+                <li class="footer-nav__item footer-nav__item--logo"><a href="" class="footer-nav__link">
+                        <svg viewBox="0 0 200 50" width="120" height="30">
+                            <image xlink:href="../img/logo/ohmyfood@2x.svg" width="200" height="50" />
+                        </svg>
+                    </a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link"><i class="fas fa-utensils"></i>
+                        Proposer un restaurant</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link"><i class="fas fa-hands-helping"></i>
+                        Devenir partenaire</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Mentions légales</a></li>
+                <li class="footer-nav__item"><a href="mailto:conctact@ohmyfood.fr" class="footer-nav__link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
 </body>
+
 </html>

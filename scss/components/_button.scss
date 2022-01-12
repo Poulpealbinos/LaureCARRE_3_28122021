@@ -1,5 +1,6 @@
 .btn{
     display: flex;
+    position: relative;
     align-content: center;
     align-items: center;
     justify-content: center;
@@ -9,14 +10,56 @@
     margin: 30px auto;
 
     border-radius: 25px;
-    background: $omf-color-01;
-    background: -moz-linear-gradient(356deg, $omf-color-01 20%, $omf-color-02 100%);
-    background: -webkit-linear-gradient(356deg, $omf-color-01 20%, $omf-color-02 100%);
-    background: linear-gradient(356deg, $omf-color-01 20%, $omf-color-02 100%);
+    z-index: 1;
+
+    @include gradient-bk;
     @include box-shadow;
+    &:hover{
+        border-radius: 25px;
+        &::after{
+            border-radius: 25px;
+            opacity: 1;
+        };
+    };
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        border-radius: 25px;
+        @include gradient-bk(lighten($omf-color-01, 10%),lighten($omf-color-02, 10%));
+        @include box-shadow(darken($light-grey,20%));
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 0.5s;
+    }
     &__body{
         font-size: map-get($font-size, "button");
         padding: 0 24px;
         color: #fff;
     }
 };
+
+.fav-action {
+    &:hover{
+        font-weight: bold;
+        color: $omf-color-03;
+        animation: fav-action 0.8s ease-out;
+    }
+}
+@keyframes fav-action {
+    0% {
+        font-weight: normal;
+        color: rgba(255, 255, 255, 0);
+    }
+    20%{
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0);
+    }
+    100% {
+        font-weight: bold;
+        color: $omf-color-03;
+    }
+}

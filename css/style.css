@@ -38,6 +38,7 @@ a {
 
 .btn {
   display: flex;
+  position: relative;
   align-content: center;
   align-items: center;
   justify-content: center;
@@ -45,11 +46,36 @@ a {
   width: max-content;
   margin: 30px auto;
   border-radius: 25px;
+  z-index: 1;
   background: #9356DC;
   background: -moz-linear-gradient(356deg, #9356DC 20%, #ff79da 100%);
   background: -webkit-linear-gradient(356deg, #9356DC 20%, #ff79da 100%);
   background: linear-gradient(356deg, #9356DC 20%, #ff79da 100%);
   box-shadow: 0 3px 6px #c8c8c8;
+}
+.btn:hover {
+  border-radius: 25px;
+}
+.btn:hover::after {
+  border-radius: 25px;
+  opacity: 1;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 25px;
+  background: #ae80e5;
+  background: -moz-linear-gradient(356deg, #ae80e5 20%, #fface8 100%);
+  background: -webkit-linear-gradient(356deg, #ae80e5 20%, #fface8 100%);
+  background: linear-gradient(356deg, #ae80e5 20%, #fface8 100%);
+  box-shadow: 0 3px 6px #959595;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.5s;
 }
 .btn__body {
   font-size: 16px;
@@ -57,6 +83,26 @@ a {
   color: #fff;
 }
 
+.fav-action:hover {
+  font-weight: bold;
+  color: #99E2D0;
+  animation: fav-action 0.8s ease-out;
+}
+
+@keyframes fav-action {
+  0% {
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0);
+  }
+  20% {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    font-weight: bold;
+    color: #99E2D0;
+  }
+}
 .card {
   width: 100%;
   margin: 0px auto;

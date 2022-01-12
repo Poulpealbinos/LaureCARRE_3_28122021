@@ -1,7 +1,15 @@
-@mixin box-shadow ($color: #c8c8c8) {
+@mixin box-shadow ($color: $light-grey) {
   box-shadow: 0 3px 6px $color;
 }
+@mixin gradient-bk($color1: $omf-color-01, $color2: $omf-color-02){
+  background: $color1;
+  background: -moz-linear-gradient(356deg, $color1 20%, $color2 100%);
+  background: -webkit-linear-gradient(356deg, $color1 20%, $color2 100%);
+  background: linear-gradient(356deg, $color1 20%, $color2 100%);
+}
 
+
+//Numérotation auto selon place
 @mixin numerotation($nmbElement) {
   @for $i from 0 to $nmbElement {
       &:nth-child(#{$i + 1}) {
