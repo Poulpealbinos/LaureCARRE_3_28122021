@@ -136,6 +136,9 @@ a {
   margin: 0;
   padding: 20px;
 }
+.row--prefooter {
+  padding: 20px 20px 40px;
+}
 
 .hero__figure {
   width: 100vw;
@@ -173,6 +176,9 @@ a {
   margin-right: 20px;
 }
 
+.menu__container:not(:last-child) {
+  margin-bottom: 40px;
+}
 .menu__title {
   margin-bottom: 14px;
 }
@@ -241,7 +247,6 @@ a {
 
 .main-footer {
   background-color: #353535;
-  margin-top: 45px;
   padding: 24px;
 }
 
