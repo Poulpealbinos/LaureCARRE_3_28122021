@@ -11,3 +11,11 @@
     }
   }
 };
+
+
+//RESPONSIVE
+@mixin media-min($key) {
+  @media screen and (min-width: map-get($breakpoints, $key)) {
+      &{ @content; }
+  }
+}
