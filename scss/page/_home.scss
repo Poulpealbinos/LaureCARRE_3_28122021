@@ -25,14 +25,15 @@
 //Titres sans-sérif pour homepage
 h1{
     font-family: $omf-typo-02;
-    font-size: map-get($font-size, "T1");
+    font-size: map-get($font-size, "XL");
     font-weight: bold;
     text-align: center;
 };
 h2{
     font-family: $omf-typo-02;
-    font-size: map-get($font-size, "T1");
+    font-size: map-get($font-size, "XL");
     font-weight: bold;
+    margin-bottom: 30px;
 };
 
 //Block element
@@ -66,4 +67,22 @@ h2{
             margin-right: 24px;
         }
     };
+    &--M-3 {
+        @include media-min("tablet") {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: center;
+        };
+    }
+    &--L-3 {
+        @include media-min("desktop") {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: center;
+        };
+    }
 };

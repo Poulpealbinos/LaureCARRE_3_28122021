@@ -7,7 +7,18 @@ $omf-color-03: #99E2D0;
 $omf-typo-01: Shrikhand, cursive;
 $omf-typo-02: Roboto, sans-serif;
 $font-size: (
+    "XL" : 24px,
+    "L" : 20px,
+    "M" : 18px,
+    "S" : 16px, //default
+    "XS" : 14px,
     "T1": 24px,
-    "p": 18px,
     "button": 16px
+);
+
+//BREAKPOINT RESPONSIVE
+$breakpoints: (
+    "phone": 500px,
+    "tablet": 900px,
+    "desktop": 1024px,
 );
