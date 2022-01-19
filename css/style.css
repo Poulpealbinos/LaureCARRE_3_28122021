@@ -167,6 +167,18 @@ a {
   align-items: center;
 }
 
+.menu__container {
+  transform: translate(-120%, 0);
+}
+.menu__container:nth-child(1) {
+  animation: fadeIn 1s ease-out 0.5s 1 forwards;
+}
+.menu__container:nth-child(2) {
+  animation: fadeIn 1s ease-out 1s 1 forwards;
+}
+.menu__container:nth-child(3) {
+  animation: fadeIn 1s ease-out 1.5s 1 forwards;
+}
 .menu__container:not(:last-child) {
   margin-bottom: 40px;
 }
@@ -196,7 +208,7 @@ a {
 .menu-card {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   min-height: 66px;
   background: #fff;
   overflow: hidden;
@@ -210,6 +222,10 @@ a {
     position: relative;
   }
 }
+.menu-card:hover .menu-card__body {
+  width: 85%;
+  transition: width 0.5s;
+}
 .menu-card:hover .menu-card__action {
   width: 15%;
   transition: width 0.5s;
@@ -217,6 +233,14 @@ a {
 .menu-card__title {
   font-weight: 600;
   font-size: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media screen and (min-width: 900px) {
+  .menu-card__title {
+    white-space: initial;
+  }
 }
 .menu-card__info {
   font-weight: 300;
@@ -247,7 +271,6 @@ a {
   align-content: center;
   justify-content: center;
   align-items: center;
-  height: 100%;
   background: #99E2D0;
   color: #fff;
 }
@@ -255,9 +278,20 @@ a {
   .menu-card__action {
     position: absolute;
     right: 0;
+    height: 100%;
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    transform: translate(-120%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
 .main-nav {
   height: 64px;
   z-index: 100;
@@ -340,6 +374,11 @@ a {
   font-size: 18px;
   margin-right: 20px;
 }
+@media screen and (min-width: 900px) {
+  .restaurant-menu {
+    overflow: hidden;
+  }
+}
 
 .main-footer {
   background-color: #353535;
@@ -357,9 +396,118 @@ a {
   color: #fff;
 }
 
+.loaderSpinner {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background: #ffffffea;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  animation: loaderTimming 3s linear 1 forwards;
+}
+.loaderSpinner__container {
+  margin-right: calc(4vw + 50px);
+}
+.loaderSpinner__container div {
+  animation: loaderAnimation 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.loaderSpinner__container div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #9356DC;
+  margin: -4px 0 0 -4px;
+}
+.loaderSpinner__container div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.loaderSpinner__container div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.loaderSpinner__container div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.loaderSpinner__container div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.loaderSpinner__container div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.loaderSpinner__container div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.loaderSpinner__container div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.loaderSpinner__container div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.loaderSpinner__container div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.loaderSpinner__container div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.loaderSpinner__container div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.loaderSpinner__container div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.loaderSpinner__container div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.loaderSpinner__container div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.loaderSpinner__container div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.loaderSpinner__container div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+
+@keyframes loaderAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loaderTimming {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  99% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
 .citySearch {
   height: 50px;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;

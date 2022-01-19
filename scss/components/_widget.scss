@@ -51,6 +51,18 @@
 //BLOC Menu
 .menu{
     &__container{
+        transform: translate(-120%, 0);
+        &:nth-child(1){
+            animation: fadeIn 1s ease-out 0.5s 1  forwards;
+        }
+        &:nth-child(2){
+            animation: fadeIn 1s ease-out 1s 1  forwards;
+            
+        }
+        &:nth-child(3){
+            animation: fadeIn 1s ease-out 1.5s 1  forwards;
+            
+        }
         &:not(:last-child) {
             margin-bottom: 40px;
         }
@@ -81,7 +93,7 @@
     &-card{
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: stretch;
         min-height: 66px;
 
         background: #fff;
@@ -96,6 +108,10 @@
             position: relative;
         }
         &:hover{
+            & .menu-card__body {
+                width: 85%;
+                transition: width 0.5s;
+            }
             & .menu-card__action{
                 width: 15%;
                 transition: width 0.5s;
@@ -104,6 +120,12 @@
         &__title{
             font-weight: 600;
             font-size: map-get($font-size, "M" );
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            @include media-min("tablet") {
+                white-space: initial;
+            }
+            overflow: hidden;
         }
         &__info{
             font-weight: 300;
@@ -134,13 +156,23 @@
             align-content: center;
             justify-content: center;
             align-items: center;
-            height: 100%;
             background: $omf-color-03;
             color: #fff;
-            @include media-min("tablet"){
+            @include media-min('tablet') {
                 position: absolute;
                 right: 0;
+                height: 100%;
             }
         }
+    }
+}
+@keyframes fadeIn {
+    0% {
+        transform: translate(-120%, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
     }
 }

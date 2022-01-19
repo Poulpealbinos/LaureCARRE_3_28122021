@@ -50,5 +50,10 @@
                 margin-right: 20px;
             }
         }
-    }  
+    }
+    &-menu{
+        @include media-min('tablet'){
+            overflow: hidden;
+        }
+    } 
 }
