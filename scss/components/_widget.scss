@@ -4,7 +4,7 @@
     margin: 0px auto;
     margin-bottom: 18px;
     background-color: #fff;
-    border-radius: 10px;
+    @include border-radius(10px);
     overflow: hidden;
     @include box-shadow;
     @include media-min("tablet"){
@@ -20,7 +20,7 @@
         top: 14px;
         right: 14px;
         padding: 7px 14px;
-        border-radius: 3px;
+        @include border-radius(3px);
         background-color: $omf-color-03;
         color: darken($omf-color-03, 50%);
     }
@@ -89,7 +89,7 @@
         overflow: hidden;
 
         margin-bottom: 14px;
-        border-radius: 14px;
+        @include border-radius(14px);
 
         @include box-shadow;
         @include media-min("tablet") {

@@ -25,7 +25,7 @@
                 position: absolute;
                 width: 7px;
                 height: 7px;
-                border-radius: 50%;
+                @include border-radius(50%);
                 background: $omf-color-01;
                 margin: -4px 0 0 -4px;
             }
@@ -121,8 +121,7 @@
         margin: auto;
         background: #fff;
         &--L-rounded{
-            border-top-left-radius: 25px;
-            border-top-right-radius: 25px;
+            @include border-radius(25px,'top');
             padding-top: 30px
         }
     }
@@ -140,7 +139,7 @@
         margin-bottom: 24px;
         
         background: #f8f8f8;
-        border-radius: 20px;
+        @include border-radius(20px);
         @include box-shadow;
         @include numerotation(3);
         &::before{
@@ -149,7 +148,7 @@
             left: -9px;
             background: $omf-color-01;
             padding: 3px 7px;
-            border-radius: 50%;
+            @include border-radius(50%);
             color: white;
         };
         & .fas {

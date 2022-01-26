@@ -1,6 +1,8 @@
 @mixin box-shadow ($color: $light-grey) {
   box-shadow: 0 3px 6px $color;
 }
+
+//WEBKIT ET COMPATIBILITE NAV
 @mixin gradient-bk($color1: $omf-color-01, $color2: $omf-color-02){
   background: $color1;
   background: -moz-linear-gradient(356deg, $color1 20%, $color2 100%);
@@ -8,6 +10,15 @@
   background: linear-gradient(356deg, $color1 20%, $color2 100%);
 }
 
+@mixin border-radius($i1:25px,$side:'all'){
+  @if ($side == 'all') {
+    -webkit-border-radius: $i1;
+    border-radius: $i1;
+  } @else if ($side == 'top') {
+    -webkit-border-radius: $i1 $i1 0 0;
+    border-radius: $i1 $i1 0 0;
+  }
+}
 
 //Numérotation auto selon place
 @mixin numerotation($nmbElement) {
