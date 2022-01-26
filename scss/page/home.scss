@@ -1,0 +1,214 @@
+//1 Utils
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.loaderSpinner{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background: #ffffffea;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    animation: loaderTimming 3s linear 1 forwards;
+    &__container{
+        margin-right: calc(4vw + 50px);
+        & div {
+            animation: loaderAnimation 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            transform-origin: 40px 40px;
+            &:after {
+                content: " ";
+                display: block;
+                position: absolute;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: $omf-color-01;
+                margin: -4px 0 0 -4px;
+            }
+            &:nth-child(1) {
+                animation-delay: -0.036s;
+                &:after {
+                    top: 63px;
+                    left: 63px;
+                }
+            }
+            &:nth-child(2) {
+                animation-delay: -0.072s;
+                &:after {
+                    top: 68px;
+                    left: 56px;
+                }
+            }
+            &:nth-child(3) {
+                animation-delay: -0.108s;
+                &:after {
+                    top: 71px;
+                    left: 48px;
+                }
+            }
+            &:nth-child(4) {
+                animation-delay: -0.144s;
+                &:after {
+                    top: 72px;
+                    left: 40px;
+                }
+            }
+            &:nth-child(5) {
+                animation-delay: -0.18s;
+                &:after {
+                    top: 71px;
+                    left: 32px;
+                }
+            }
+            &:nth-child(6) {
+                animation-delay: -0.216s;
+                &:after {
+                    top: 68px;
+                    left: 24px;
+                }
+            }
+            &:nth-child(7) {
+                animation-delay: -0.252s;
+                &:after {
+                    top: 63px;
+                    left: 17px;
+                }
+            }
+            &:nth-child(8) {
+                animation-delay: -0.288s;
+                &:after {
+                    top: 56px;
+                    left: 12px;
+                }
+            }
+        }
+    }
+}
+@keyframes loaderAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes loaderTimming {
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    99%{
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+//Special row
+.homeContainer {
+    background-color: #f6f6f6;
+}
+.row {
+    @include media-min('tablet') {
+        max-width: 900px;
+        margin: auto;
+        background: #fff;
+        &--L-rounded{
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            padding-top: 30px
+        }
+    }
+    &-landing {
+        text-align: center;
+        background-color: #f6f6f6;
+        max-width: 100%;
+    };
+}
+//How To - list style
+.list{
+    &-item{
+        position: relative;
+        padding: 30px;
+        margin-bottom: 24px;
+        
+        background: #f8f8f8;
+        border-radius: 20px;
+        @include box-shadow;
+        @include numerotation(3);
+        &::before{
+            display: block;
+            position: absolute;
+            left: -9px;
+            background: $omf-color-01;
+            padding: 3px 7px;
+            border-radius: 50%;
+            color: white;
+        };
+        & .fas {
+            margin-right: 24px;
+        }
+    };
+    &--M-3 {
+        @include media-min("tablet") {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: center;
+        };
+    }
+    &--L-3 {
+        @include media-min("desktop") {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: center;
+        };
+    }
+};
+//Form city
+.citySearch {
+    height: 50px;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background: #eaeaea;
+    &__label{
+        & i{
+            color: #353535;
+        }
+    }
+    &__input{
+        border: none;
+        background: none;
+        color: #353535;
+        text-align: center;
+        font-weight: 600;
+    };
+};
+
+//Titres sans-sérif pour homepage
+h1{
+    font-family: $omf-typo-02;
+    font-size: map-get($font-size, "XL");
+    font-weight: bold;
+    text-align: center;
+};
+h2{
+    font-family: $omf-typo-02;
+    font-size: map-get($font-size, "XL");
+    font-weight: bold;
+    margin-bottom: 30px;
+};

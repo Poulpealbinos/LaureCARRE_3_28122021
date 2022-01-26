@@ -3,6 +3,13 @@
     padding: 24px;
 }
 .footer-nav {
+    &__list{
+        @include media-min('tablet'){
+            max-width: 900px;
+            margin: auto;
+            padding: 0 24px;
+        }
+    }
     &__item{
         margin-bottom: 10px;
         &--logo{
