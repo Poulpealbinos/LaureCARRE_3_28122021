@@ -19,6 +19,36 @@
     border-radius: $i1 $i1 0 0;
   }
 }
+@mixin transition($name,$duration,$function:linear) {
+  -webkit-transition: $name #{$duration}s $function;
+  -moz-transition: $name #{$duration}s $function;
+  -ms-transition: $name #{$duration}s $function;
+  -o-transition: $name #{$duration}s $function;
+  transition: $name #{$duration}s $function;
+}
+@mixin scale($size:1,$o:null) {
+  @if ($o == 'Y'){
+    -moz-transform: scaleY(#{$size});
+    -webkit-transform: scaleY(#{$size});
+    -o-transform: scaleY(#{$size});
+    -ms-transform: scaleY(#{$size});
+    transform: scaleY(#{$size});
+  }
+  @else if ($o == 'X'){
+    -moz-transform: scaleX(#{$size});
+    -webkit-transform: scaleX(#{$size});
+    -o-transform: scaleX(#{$size});
+    -ms-transform: scaleX(#{$size});
+    transform: scaleX(#{$size});
+  }
+  @else {
+    -moz-transform: scale(#{$size});
+    -webkit-transform: scale(#{$size});
+    -o-transform: scale(#{$size});
+    -ms-transform: scale(#{$size});
+    transform: scale(#{$size});
+  }
+}
 
 //Numérotation auto selon place
 @mixin numerotation($nmbElement) {
@@ -34,7 +64,7 @@
 @mixin childFadeIn($nmbElement) {
   @for $i from 0 to $nmbElement {
     &:nth-child(#{$i+1}) {
-      animation: fadeIn 1s ease-out #{$i + 0.5}s 1 forwards;
+      animation: fadeIn 1s ease-out #{$i * 0.5}s 1 forwards;
     }
   }
 };
