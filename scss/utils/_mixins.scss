@@ -19,12 +19,13 @@
     border-radius: $i1 $i1 0 0;
   }
 }
-@mixin transition($name,$duration,$function:linear) {
-  -webkit-transition: $name #{$duration}s $function;
-  -moz-transition: $name #{$duration}s $function;
-  -ms-transition: $name #{$duration}s $function;
-  -o-transition: $name #{$duration}s $function;
-  transition: $name #{$duration}s $function;
+@mixin transition($name,$duration:0.5,$function:linear) {
+  $ds: $duration * 1s;
+  -webkit-transition: $name $ds $function;
+  -moz-transition: $name $ds $function;
+  -ms-transition: $name $ds $function;
+  -o-transition: $name $ds $function;
+  transition: $name $ds $function;
 }
 @mixin scale($size:1,$o:null) {
   @if ($o == 'Y'){
