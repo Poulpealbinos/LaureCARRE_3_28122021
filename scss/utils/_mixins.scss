@@ -19,6 +19,14 @@
     }
   }
 };
+//Fade-in menu
+@mixin childFadeIn($nmbElement) {
+  @for $i from 0 to $nmbElement {
+    &:nth-child(#{$i+1}) {
+      animation: fadeIn 1s ease-out #{$i + 0.5}s 1 forwards;
+    }
+  }
+};
 
 
 //RESPONSIVE
