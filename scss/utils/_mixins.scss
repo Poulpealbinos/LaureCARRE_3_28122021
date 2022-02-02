@@ -9,7 +9,6 @@
   background: -webkit-linear-gradient(356deg, $color1 20%, $color2 100%);
   background: linear-gradient(356deg, $color1 20%, $color2 100%);
 }
-
 @mixin border-radius($i1:25px,$side:'all'){
   @if ($side == 'all') {
     -webkit-border-radius: $i1;
@@ -50,6 +49,13 @@
     transform: scale(#{$size});
   }
 }
+@mixin rotate($deg:360) {
+  $degr: $deg * 1deg;
+  -webkit-transform: rotate(#{$degr});
+  -ms-transform: rotate(#{$degr});
+  -o-transform: rotate(#{$degr});
+  transform: rotate(#{$degr});
+}
 
 //Numérotation auto selon place
 @mixin numerotation($nmbElement) {
@@ -64,13 +70,11 @@
 //Fade-in menu
 @mixin childFadeIn($nmbElement) {
   @for $i from 0 to $nmbElement {
-    &:nth-child(#{$i+1}) {
-      animation: fadeIn 1s ease-out #{$i * 0.5}s 1 forwards;
+    &--#{$i+1} {
+      animation: fadeIn 1s ease-out #{$i * 0.4}s 1 forwards;
     }
   }
 };
-
-
 //RESPONSIVE
 @mixin media-min($key) {
   @media screen and (min-width: map-get($breakpoints, $key)) {

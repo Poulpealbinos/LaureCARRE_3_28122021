@@ -50,8 +50,6 @@
 //BLOC Menu
 .menu{
     &__container{
-        transform: translate(-120%, 0);
-        @include childFadeIn(3);
         &:not(:last-child) {
             margin-bottom: 40px;
         }
@@ -71,6 +69,7 @@
         }
     }
     &__inner{
+        overflow: hidden;
         @include media-min("tablet") {
             display: flex;
             flex-direction: row;
@@ -91,19 +90,25 @@
         margin-bottom: 14px;
         @include border-radius(14px);
 
+        transform: translate(0, 300%);
+
         @include box-shadow;
         @include media-min("tablet") {
             width: 49%;
             position: relative;
         }
+        @include childFadeIn(9);
         &:hover{
             & .menu-card__body {
                 width: 85%;
-                @include transition(width,0.5);
+                @include transition(width,0.5,cubic-bezier(.46,.03,.52,.96));
             }
             & .menu-card__action{
                 width: 15%;
-                @include transition(width,0.5);
+                @include transition(width,0.5,cubic-bezier(.46,.03,.52,.96));
+                & i{
+                    animation: rotate 0.3s cubic-bezier(.46,.03,.52,.96);
+                }
             }
         }
         &__title{
@@ -166,7 +171,7 @@
 }
 @keyframes fadeIn {
     0% {
-        transform: translate(-120%, 0);
+        transform: translate(0, 300%);
         opacity: 0;
     }
     100% {
@@ -174,3 +179,11 @@
         opacity: 1;
     }
 }
+@keyframes rotate {
+    from {
+        @include rotate(-360);
+    }
+    to {
+        @include rotate(0);
+    }
+} 
