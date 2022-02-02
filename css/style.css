@@ -261,6 +261,9 @@ a {
 .menu-card--9 {
   animation: fadeIn 1s ease-out 3.2s 1 forwards;
 }
+.menu-card--10 {
+  animation: fadeIn 1s ease-out 3.6s 1 forwards;
+}
 .menu-card:hover .menu-card__body {
   width: 85%;
   -webkit-transition: width 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);

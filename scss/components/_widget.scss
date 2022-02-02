@@ -97,7 +97,7 @@
             width: 49%;
             position: relative;
         }
-        @include childFadeIn(9);
+        @include childFadeIn(10);
         &:hover{
             & .menu-card__body {
                 width: 85%;

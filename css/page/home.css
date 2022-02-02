@@ -108,8 +108,10 @@
     transform: scale(0);
   }
 }
-.homeContainer {
-  background-color: #f6f6f6;
+@media screen and (min-width: 900px) {
+  .homeContainer {
+    background-color: #f6f6f6;
+  }
 }
 
 @media screen and (min-width: 900px) {
