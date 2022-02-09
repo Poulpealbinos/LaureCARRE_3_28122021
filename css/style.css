@@ -145,7 +145,7 @@ a {
   overflow: hidden;
   box-shadow: 0 3px 6px #c8c8c8;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
   .card {
     width: 45%;
   }
@@ -215,7 +215,7 @@ a {
   width: 13%;
   border-bottom: 2px solid #99E2D0;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
   .menu__inner {
     display: flex;
     flex-direction: row;
@@ -236,7 +236,7 @@ a {
   border-radius: 14px;
   box-shadow: 0 3px 6px #c8c8c8;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
   .menu-card {
     width: 49%;
     position: relative;
@@ -265,7 +265,7 @@ a {
   white-space: nowrap;
   overflow: hidden;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
   .menu-card__title {
     white-space: initial;
   }
@@ -279,7 +279,7 @@ a {
   white-space: nowrap;
   overflow: hidden;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
   .menu-card__info {
     white-space: initial;
   }
@@ -348,7 +348,7 @@ a {
   justify-content: space-between;
   list-style: none;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
   .main-nav__list {
     width: 900px;
     margin: 0 auto;
@@ -391,7 +391,7 @@ a {
 .restaurant-container {
   background-color: #f8f8f8;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
   .restaurant-container {
     max-width: 900px;
     margin: 0 auto;
@@ -418,7 +418,7 @@ a {
   font-size: 18px;
   margin-right: 20px;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
   .restaurant-menu {
     overflow: hidden;
   }
@@ -429,7 +429,7 @@ a {
   padding: 24px;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
   .footer-nav__list {
     max-width: 900px;
     margin: auto;
