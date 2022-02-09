@@ -113,7 +113,9 @@
 
 //Special row
 .homeContainer {
-    background-color: #f6f6f6;
+    @include media-min('tablet') {
+        background-color: #f6f6f6;
+    };
 }
 .row {
     @include media-min('tablet') {
