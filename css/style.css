@@ -93,6 +93,7 @@ a {
 
 .fav-action {
   height: 18px;
+  clip-path: polygon(14% -17%, 44.44% -1.67%, 70% -11%, 106.67% -12.22%, 100% 35%, 80% 70%, 50% 100%, 14.44% 75.56%, -16.67% 40.56%, -12.22% 4.44%);
 }
 .fav-action__border {
   position: relative;
@@ -104,7 +105,7 @@ a {
 }
 .fav-action__mask {
   display: block;
-  top: -20px;
+  top: -19px;
   right: 1px;
   position: relative;
   background: #ff79da;
