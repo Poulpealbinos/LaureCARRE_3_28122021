@@ -34,4 +34,10 @@
     &__link {
         display: block;
     };
+    &__logo {
+        font-family: $omf-typo-01;
+        font-size: map-get($font-size, "XL");
+        font-weight: 500;
+        color: #000
+    }
 };
