@@ -95,39 +95,43 @@ a {
   height: 18px;
 }
 .fav-action__border {
-  z-index: 3;
   position: relative;
+  -webkit-transition: color 0.8s cubic-bezier(0.32, 0, 0.07, 1);
+  -moz-transition: color 0.8s cubic-bezier(0.32, 0, 0.07, 1);
+  -ms-transition: color 0.8s cubic-bezier(0.32, 0, 0.07, 1);
+  -o-transition: color 0.8s cubic-bezier(0.32, 0, 0.07, 1);
+  transition: color 0.8s cubic-bezier(0.32, 0, 0.07, 1);
 }
 .fav-action__mask {
-  clip-path: polygon(30% 0%, 50% 15%, 70% 0%, 90% 10%, 100% 35%, 80% 70%, 50% 100%, 20% 70%, 0% 35%, 10% 10%);
-  height: 16px;
-  width: 18px;
   display: block;
-  top: -18px;
-  left: -1px;
+  top: -20px;
+  right: 1px;
   position: relative;
-}
-.fav-action__mask::after {
-  content: "";
+  background: #ff79da;
+  background: -moz-linear-gradient(356deg, #ff79da 20%, #9356DC 100%);
+  background: -webkit-linear-gradient(356deg, #ff79da 20%, #9356DC 100%);
+  background: linear-gradient(356deg, #ff79da 20%, #9356DC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-size: 18px;
   transform-origin: 50% 100%;
   -moz-transform: scaleY(0);
   -webkit-transform: scaleY(0);
   -o-transform: scaleY(0);
   -ms-transform: scaleY(0);
   transform: scaleY(0);
-  -webkit-transition: transform 1s cubic-bezier(0.32, 0, 0.07, 1);
-  -moz-transition: transform 1s cubic-bezier(0.32, 0, 0.07, 1);
-  -ms-transition: transform 1s cubic-bezier(0.32, 0, 0.07, 1);
-  -o-transition: transform 1s cubic-bezier(0.32, 0, 0.07, 1);
-  transition: transform 1s cubic-bezier(0.32, 0, 0.07, 1);
-  background: #99E2D0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  -webkit-transition: transform 1s cubic-bezier(0.76, 0.2, 0, 1);
+  -moz-transition: transform 1s cubic-bezier(0.76, 0.2, 0, 1);
+  -ms-transition: transform 1s cubic-bezier(0.76, 0.2, 0, 1);
+  -o-transition: transform 1s cubic-bezier(0.76, 0.2, 0, 1);
+  transition: transform 1s cubic-bezier(0.76, 0.2, 0, 1);
 }
-.fav-action:hover .fav-action__mask::after {
+.fav-action:hover .fav-action__border {
+  color: #9356DC;
+}
+.fav-action:hover .fav-action__mask {
   -moz-transform: scaleY(1);
   -webkit-transform: scaleY(1);
   -o-transform: scaleY(1);

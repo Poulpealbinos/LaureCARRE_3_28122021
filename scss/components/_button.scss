@@ -45,32 +45,31 @@
 .fav-action {
     height: 18px;
     &__border {
-        z-index: 3;
         position: relative;
+        @include transition(color,0.8,cubic-bezier(.32,0,.07,1));
     }
     &__mask {
-        clip-path: polygon(30% 0%, 50% 15%, 70% 0%, 90% 10%, 100% 35%, 80% 70%, 50% 100%, 20% 70%, 0% 35%, 10% 10%);
-        height: 16px;
-        width: 18px;
         display: block;
-        top: -18px;
-        left: -1px;
+        top: -20px;
+        right: 1px;
         position: relative;
-        &::after{
-            content: "";
-            transform-origin: 50% 100%;
-            @include scale(0,Y);
-            @include transition(transform,1,cubic-bezier(.32,0,.07,1));
-            background: $omf-color-03;
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-        }
+
+        @include gradient-bk($omf-color-02,$omf-color-01);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        font-size: 18px;
+
+        transform-origin: 50% 100%;
+        @include scale(0,Y);
+        @include transition(transform,1,cubic-bezier(.76,0.2,0,1));
     }
     &:hover{
-        & .fav-action__mask::after {
+        & .fav-action__border {
+            color: $omf-color-01
+        }
+        & .fav-action__mask {
             @include scale(1,Y);
         }
     }
