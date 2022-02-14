@@ -137,6 +137,7 @@
 .list{
     &-item{
         position: relative;
+        z-index: 1;
         padding: 30px;
         margin-bottom: 24px;
         
@@ -144,10 +145,13 @@
         @include border-radius(20px);
         @include box-shadow;
         @include numerotation(3);
-        &::before{
+        &::after{
             display: block;
             position: absolute;
             left: -9px;
+            top: 50%;
+            transform: translateY(-50%);
+
             background: $omf-color-01;
             padding: 3px 7px;
             @include border-radius(50%);
@@ -155,6 +159,32 @@
         };
         & .fas {
             margin-right: 24px;
+            color: darken($light-grey, 45%);
+            @include transition(color, 0.5);
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            z-index: -1;
+            opacity: 0;
+
+            background: lighten($omf-color-01, 30%);
+            @include border-radius(20px);
+            @include transition(opacity, 0.5);
+        }
+        &:hover{
+            &::before{
+                @include border-radius(20px);
+                opacity: 1;
+            };
+            & .fas {
+                color: $omf-color-01;
+            };
         }
     };
     &--M-3 {

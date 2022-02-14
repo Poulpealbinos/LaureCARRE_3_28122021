@@ -58,10 +58,10 @@
 }
 
 //Numérotation auto selon place
-@mixin numerotation($nmbElement) {
+@mixin numerotation($nmbElement, $position:after) {
   @for $i from 0 to $nmbElement {
       &:nth-child(#{$i + 1}) {
-      &::before {
+      &::#{$position}{
         content: "#{$i + 1}";
       }
     }
